@@ -3,8 +3,8 @@
   <div class="cnt">
 
     <div class="welcome-note">
-      <div class="title-blk">
-        Welcome back         
+      <div class="text-3xl font-semibold mb-2">
+        Welcome back
       </div>
       <div class="sub-title-blk">
         Login to your account
@@ -12,49 +12,47 @@
     </div>
 
     <div class="form app-form">
+      <form [formGroup]="formGroup" (ngSubmit)="submit()">
+        <div class="inputs-blk">
+          <ion-list lines="none">
 
-      <div class="inputs-blk">
-        <ion-list lines="none">
+            <ion-item>
+              <ion-label position="floating">Username</ion-label>
+              <ion-input formControlName="username"></ion-input>
+              <ion-icon name="person" class="icn-left" slot="start"></ion-icon>
+            </ion-item>
 
-          <ion-item>
-            <ion-label position="floating">Username</ion-label>
-            <ion-input></ion-input>
-            <ion-icon name="person" class="icn-left" slot="start"></ion-icon>
-          </ion-item>
+            <ion-item>
+              <ion-label position="floating">Password</ion-label>
+              <ion-input formControlName="password" type="password"></ion-input>
+              <ion-icon name="lock-open" class="icn-left" slot="start"></ion-icon>
+            </ion-item>
 
-          <ion-item>
-            <ion-label position="floating">Password</ion-label>
-            <ion-input type="password"></ion-input>
-            <ion-icon name="lock-open" class="icn-left" slot="start"></ion-icon>
-          </ion-item>
-
-        </ion-list>
-
-        <ion-grid class="ion-no-padding">
-          <ion-row class="ion-align-items-center">
-            <ion-col>
-              <div class="remember-me">
-                <input type="checkbox">
-                <span class="txt">Remember me</span>
-              </div>
-            </ion-col>
-            <ion-col class="ion-text-right">
-              <ion-button fill="clear" class="ion-text-capitalize ion-no-padding ion-no-margin" size="small">
-                Forgot Password?
-              </ion-button>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </div>
-
-      <ion-button shape="round" expand="block">
-        Login
-      </ion-button>
-      <div class="signup-cnt">
-        <span class="txt">Dont have an account?</span>
-        <a class="link" href="javascript:;">Signup</a>
-      </div>
-
+          </ion-list>
+          <ion-grid class="ion-no-padding">
+            <ion-row class="ion-align-items-center">
+              <ion-col>
+                <div class="remember-me">
+                  <input type="checkbox">
+                  <span class="txt">Remember me</span>
+                </div>
+              </ion-col>
+              <ion-col class="ion-text-right">
+                <ion-button fill="clear" class="ion-text-capitalize ion-no-padding ion-no-margin" size="small">
+                  Forgot Password?
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+        <ion-button type="submit" shape="round" expand="block">
+          Login
+        </ion-button>
+        <div class="signup-cnt">
+          <span class="txt">Dont have an account?</span>
+          <a class="link" href="javascript:;">Signup</a>
+        </div>
+      </form>
     </div>
 
   </div>

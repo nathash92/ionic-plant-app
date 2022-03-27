@@ -1,1 +1,68 @@
-<p>signup works!</p>
+<ion-content>
+
+  <form [formGroup]="formGroup" (ngSubmit)="submit()" class="h-full">
+    <div class="p-5 flex flex-col justify-between h-full">
+
+      <div>
+        <div class="text-center mb-4 mt-4">
+          <div class="text-3xl font-semibold mb-2">
+            Register
+            <img class="img" src="assets/imgs/leaves-2.webp" alt="">
+          </div>
+          <div class="text-gray-500">Create your new account</div>
+        </div>
+
+        <div class="form app-form">
+
+          <div class="inputs-blk">
+            <ion-list lines="none">
+
+              <ion-item>
+                <ion-label position="floating">Full Name</ion-label>
+                <ion-input formControlName="username"></ion-input>
+                <ion-icon name="person" class="icn-left" slot="start"></ion-icon>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input type="email" formControlName="email"></ion-input>
+                <ion-icon name="person" class="icn-left" slot="start"></ion-icon>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Password</ion-label>
+                <ion-input formControlName="password" type="password"></ion-input>
+                <ion-icon name="lock-open" class="icn-left" slot="start"></ion-icon>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Confirm Password</ion-label>
+                <ion-input formControlName="confirmPassword" type="password"></ion-input>
+                <ion-icon name="lock-open" class="icn-left" slot="start"></ion-icon>
+              </ion-item>
+
+            </ion-list>
+          </div>
+
+          <div class="text-center text-xs mt-3 text-gray-500">
+            By signing you agree to our Terms of use and privacy notice
+          </div>
+
+        </div>
+      </div>
+
+      <div>
+        <ion-button type="submit" shape="round" expand="block">
+          Sign Up
+        </ion-button>
+
+        <div class="text-center text-xs mt-3 mb-2">
+          <span class="text-gray-500">Already have an account?</span>
+          <a class="px-1" href="javascript:;">Login</a>
+        </div>
+      </div>
+
+    </div>
+  </form>
+
+</ion-content>
