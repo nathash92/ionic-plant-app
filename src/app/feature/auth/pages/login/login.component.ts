@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { NavService } from 'src/app/providers/nav.service';
 import { ToastService } from 'src/app/providers/toast.service';
 
 @Component({
@@ -12,7 +13,8 @@ export class LoginComponent implements OnInit {
   formGroup: FormGroup;
 
   constructor(
-    private toastService: ToastService
+    private toastService: ToastService,
+    private navService: NavService
   ) {
     this.formGroup = new FormGroup({
       username: new FormControl(''),
@@ -45,6 +47,10 @@ export class LoginComponent implements OnInit {
       msg: msg,
       status: msg ? false : true
     };
+  }
+
+  signup() {
+    this.navService.nav('auth/signup');
   }
 
 }
