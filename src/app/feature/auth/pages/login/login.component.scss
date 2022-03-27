@@ -1,0 +1,57 @@
+.cnt {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  flex-direction: column;
+  background-image: url("/assets/imgs/leaves-banner.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 30%;
+  .welcome-note {
+    text-align: center;    
+    .title-blk {
+      font-size: 35px;
+      color: var(--ion-color-primary);
+      font-weight: 600;
+    }
+    .sub-title-blk {
+      color: #6c6c6c;
+      margin-bottom: 20px;
+    }
+  }
+  .form {
+    width: 90%;
+    .inputs-blk {
+      margin-bottom: 25%;
+      ion-list {
+        padding-bottom: 0px;
+      }
+      .remember-me {
+        input[type="checkbox"] {
+          width: 13px;
+          height: 13px;
+          vertical-align: middle;
+        }
+        .txt {
+          font-size: 11px;
+          padding: 0px 5px;
+          color: var(--ion-color-primary);
+        }
+      }
+    }
+  }
+
+  .signup-cnt {
+    margin: 10px 0px;
+    font-size: 12px;
+    text-align: center;
+    .txt {
+      color: #6c6c6c;
+    }
+    .link {
+      font-weight: 600;
+      padding: 0px 5px;
+    }
+  }
+}

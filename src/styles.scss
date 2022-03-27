@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+.app-form {
+  ion-item {
+    --background: var(--ion-color-secondary);
+    margin-bottom: 15px;
+    border-radius: 5px;
+    .icn-left {
+      margin-right: 15px;
+    }
+  }
+}
