@@ -1,0 +1,31 @@
+<ion-content>
+
+  <!-- BUSY SCREEN -->
+  <div class="h-full flex justify-center items-center" *ngIf="busy">
+    <div class="text-center">
+      <ion-spinner></ion-spinner>
+    </div>
+  </div>
+
+  <!-- OPTIONS -->
+  <div class="h-full flex bg-img flex-col p-5 justify-around" *ngIf="!busy">
+    <div>
+      <div class="text-5xl font-bold text-white">
+        <div class="mb-4">The best</div>
+        <div class="mb-4">app for</div>
+        <div>your plants</div>
+      </div>
+    </div>
+    <div class="w-full">
+
+      <ion-button expand="block" color="light" shape="round" class="mb-4" (click)="signup()">
+        Sign Up
+      </ion-button>
+
+      <ion-button expand="block" shape="round" (click)="login()">
+        Login
+      </ion-button>
+    </div>
+  </div>
+
+</ion-content>
