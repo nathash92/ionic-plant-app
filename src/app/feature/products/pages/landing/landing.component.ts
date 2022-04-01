@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
+  filters = ['Recommended', 'Top', 'Indoor', 'Outdoor'];
+  selectedFilter = this.filters[0];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onFilterClick(data: string) {
+    this.selectedFilter = data;
   }
 
 }

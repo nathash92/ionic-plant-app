@@ -7,6 +7,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { ThankyouComponent } from './pages/thankyou/thankyou.component';
 import { OrderTrackComponent } from './pages/order-track/order-track.component';
+import { IonicModule } from '@ionic/angular';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { OrderTrackComponent } from './pages/order-track/order-track.component';
   ],
   imports: [
     CommonModule,
-    ProductsRoutingModule
+    ProductsRoutingModule,
+    IonicModule
   ]
 })
 export class ProductsModule { }

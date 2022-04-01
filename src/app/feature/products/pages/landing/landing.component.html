@@ -1,1 +1,111 @@
-<p>landing works!</p>
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <img src="assets/imgs/profile.webp" width="33" alt="">
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="cart-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div class="p-4 pb-0">
+
+    <div class="text-3xl font-medium mb-6">
+      <div>
+        <ion-text color="primary">Let's find your</ion-text>
+      </div>
+      <div>
+        <ion-text color="primary">plants!</ion-text>
+      </div>
+    </div>
+
+    <div class="search-inp mb-2">
+      <span class="left-icn">
+        <ion-icon name="search"></ion-icon>
+      </span>
+      <input type="text" placeholder="Search Plant">
+      <span class="right-icn">
+        <ion-icon name="mic"></ion-icon>
+      </span>
+    </div>
+
+  </div>
+
+  <div class="pl-4">
+
+    <div class="filter-chips">
+      <ion-chip class="text-center" *ngFor="let f of filters" [ngClass]="{'active': selectedFilter == f}" (click)="onFilterClick(f)">
+        <ion-label class="text-sm">
+          {{f}}
+        </ion-label>
+      </ion-chip>
+    </div>
+
+    <div class="mb-4">
+      <ion-slides [options]="{slidesPerView: 1.9, spaceBetween: 15}">
+        <ion-slide *ngFor="let i of [1, 2, 1, 2, 1]">
+          <ion-label class="text-left w-full">
+            <div class="prd-card">
+              <div class="img-cnt">
+                <div class="img-inner">
+                  <img src="{{'assets/imgs/products/' + i + '.png'}}" alt="">
+                </div>
+              </div>
+              <div class="inner">
+                <div class="curve"></div>
+                <div class="info-cnt">
+                  <div class="flex items-end">
+                    <div class="text-sm grow font-medium">
+                      <ion-text color="primary">Angel Wing Begonia</ion-text>
+                    </div>
+                    <div>
+                      <div class="price text-xs bg-white font-medium text-center">
+                        <ion-text color="primary">Rs.100</ion-text>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-label>
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+
+    <div class="mb-4">
+      <div class="text-sm mb-3">
+        <ion-text color="primary">Recent Viewed</ion-text>
+      </div>
+      <div>
+        <ion-slides [options]="{slidesPerView: 1.4, spaceBetween: 15}">
+          <ion-slide *ngFor="let i of [1, 2, 3, 4]">
+            <div class="flex w-full">
+              <div>
+                <div class="rounded-lg overflow-hidden w-16">
+                  <img src="assets/imgs/recent.jpg" alt="">
+                </div>
+              </div>
+              <div class="px-3 self-center text-left">
+                <div class="text-sm grow font-medium mb-1">
+                  <ion-text color="primary">Angel Wing Begonia</ion-text>
+                </div>
+                <div class="text-xs text-gray-400">
+                  Lorem ipsum, or lipsum as it is sometimes
+                </div>
+              </div>
+            </div>
+          </ion-slide>
+        </ion-slides>
+      </div>
+    </div>
+
+  </div>
+
+</ion-content>

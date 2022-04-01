@@ -1,0 +1,86 @@
+
+.search-inp {
+  position: relative;
+  input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: var(--ion-color-secondary);
+    border-radius: 5px;
+    padding: 10px 40px;
+  }
+  .left-icn,
+  .right-icn {
+    font-size: 22px;
+    top: 13px;
+    position: absolute;
+  }
+  .left-icn {
+    left: 10px;
+  }
+  .right-icn {
+    right: 10px;
+  }
+}
+
+.filter-chips {
+  overflow: auto;
+  white-space: nowrap;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-left: -5px;
+  ion-chip {
+    background: white;
+    ion-label {
+      opacity: 0.8;
+    }
+    &.active {
+      background: var(--ion-color-secondary);
+      font-weight: 500;
+    }
+  }
+}
+
+.prd-card {
+  height: 280px;
+  width: 100%;
+  position: relative;
+  .inner {
+    overflow: hidden;
+    border-radius: 10px;
+    background: var(--ion-color-secondary);
+    height: 230px;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+  }
+  .curve {
+    background: #cee1ce;
+    position: absolute;
+    width: 100%;
+    height: 155px;
+    clip-path: ellipse(80% 100% at 30% 0%);
+  }
+  .img-cnt {
+    position: relative;
+    z-index: 9;
+    .img-inner {
+      height: 190px;
+      display: inline-block;
+      left: 10px;
+      position: relative;
+    }
+  }
+  .info-cnt {
+    padding: 10px;
+    height: 70px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    .price {
+      padding: 5px 10px;
+      border-radius: 15px;
+    }
+  }
+}
