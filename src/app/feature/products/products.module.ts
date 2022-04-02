@@ -8,6 +8,7 @@ import { LandingComponent } from './pages/landing/landing.component';
 import { ThankyouComponent } from './pages/thankyou/thankyou.component';
 import { OrderTrackComponent } from './pages/order-track/order-track.component';
 import { IonicModule } from '@ionic/angular';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { IonicModule } from '@ionic/angular';
   imports: [
     CommonModule,
     ProductsRoutingModule,
-    IonicModule
+    IonicModule,
+    SharedModule
   ]
 })
 export class ProductsModule { }

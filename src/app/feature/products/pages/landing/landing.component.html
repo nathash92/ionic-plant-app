@@ -49,7 +49,7 @@
 
     <div class="mb-4">
       <ion-slides [options]="{slidesPerView: 1.9, spaceBetween: 15}">
-        <ion-slide *ngFor="let i of [1, 2, 1, 2, 1]">
+        <ion-slide *ngFor="let i of [1, 2, 1, 2, 1]" (click)="onItemClick()">
           <ion-label class="text-left w-full">
             <div class="prd-card">
               <div class="img-cnt">
@@ -109,3 +109,8 @@
   </div>
 
 </ion-content>
+<ion-footer class="app-bottom-tab">
+  <ion-toolbar>
+    <app-app-bottom-tab></app-app-bottom-tab>
+  </ion-toolbar>
+</ion-footer>

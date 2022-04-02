@@ -31,6 +31,9 @@ export class LoginComponent implements OnInit {
       this.toastService.show(v.msg, 'error');
       return;
     }
+    this.navService.nav('products/landing', {
+      replaceUrl: true
+    });
   }
 
   validateForm() {

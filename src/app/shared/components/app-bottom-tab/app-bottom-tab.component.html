@@ -1,0 +1,9 @@
+<ion-grid>
+  <ion-row>
+    <ion-col class="text-center" size="3" *ngFor="let t of tabs">
+      <div class="text-2xl">
+        <ion-icon name="{{activeTabKey == t.key?t.activeIcon:t.icon}}"></ion-icon>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
