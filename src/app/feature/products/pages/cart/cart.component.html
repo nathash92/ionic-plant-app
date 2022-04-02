@@ -1,1 +1,100 @@
-<p>cart works!</p>
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      My Cart
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="p-4">
+
+    <!-- CART ITEM LOOP START -->
+    <div class="flex w-full mb-6 cart-item-card p-3 rounded-lg" *ngFor="let i of [1, 2, 3, 4, 5, 6, 7]">
+      <div>
+        <!-- PRODUCT IMAGE -->
+        <div class="rounded-lg overflow-hidden w-16">
+          <img src="assets/imgs/recent.jpg" alt="">
+        </div>
+      </div>
+      <div class="pl-3 self-center text-left w-full">
+        
+        <div class="flex items-center">
+          <!-- PRODUCT NAME -->
+          <div class="text-sm grow font-medium mb-1 flex-1">
+            <ion-text color="primary">Angel Wing Begonia</ion-text>
+          </div>
+          <div>
+            <!-- REMOVE FROM CART -->
+            <ion-icon name="trash-outline"></ion-icon>
+          </div>
+        </div>
+
+        <!-- SHORT DESC -->
+        <div class="text-xs text-gray-400 mb-2">
+          Lorem ipsum, or lipsum as it is sometimes
+        </div>
+
+        <div class="flex">
+          <div>
+            <!-- FOR CART INCR AND DECR QTY START -->
+            <div class="flex items-center">
+              <div class="cbtn px-2 text-xs rounded">-</div>
+              <div class="text-xs px-2">1</div>
+              <div class="cbtn px-2 text-xs rounded">+</div>
+            </div>
+            <!-- FOR CART INCR AND DECR QTY END -->
+          </div>
+          <div class="flex-1">
+            <div class="text-sm font-medium text-right">
+              <ion-text color="primary">
+                Rs.100
+              </ion-text>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CART ITEM LOOP END -->
+
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <div class="p-3">
+      <ion-grid class="pl-0 pr-0">
+        <ion-row class="text-base">
+          <ion-col>
+            <div>Subtotal</div>
+          </ion-col>
+          <ion-col size="auto">
+            Rs.1500
+          </ion-col>
+        </ion-row>
+        <ion-row class="pb-5 border-b-slate-300 border-b text-base">
+          <ion-col>
+            <div>Shipping Cost</div>
+          </ion-col>
+          <ion-col size="auto">
+            Rs.100
+          </ion-col>
+        </ion-row>
+        <ion-row class="mt-5 mb-5 text-xl">
+          <ion-col>
+            <div class="font-medium">Total</div>
+          </ion-col>
+          <ion-col size="auto">
+            <div class="font-medium">Rs.1600</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-button expand="block" class="ion-text-capitalize h-11" shape="round">
+        Place Your Order
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>

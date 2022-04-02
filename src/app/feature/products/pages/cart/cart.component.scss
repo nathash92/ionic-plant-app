@@ -1,0 +1,15 @@
+ion-footer {
+  border-top-right-radius: 20px;
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  box-shadow: 0px -1px 3px 1px #dedede;
+  color: var(--ion-color-primary);
+}
+
+.cart-item-card {
+  background: var(--ion-color-secondary);
+}
+
+.cbtn {
+  border: 1px solid var(--ion-color-primary);
+}

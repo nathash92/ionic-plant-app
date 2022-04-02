@@ -26,4 +26,8 @@ export class LandingComponent implements OnInit {
     this.navService.nav('products/detail');
   }
 
+  viewCart() {
+    this.navService.nav('products/cart');
+  }
+
 }

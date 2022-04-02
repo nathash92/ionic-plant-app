@@ -6,7 +6,7 @@
       </ion-button>
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button>
+      <ion-button (click)="viewCart()">
         <ion-icon name="cart-outline" slot="icon-only"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -80,7 +80,7 @@
 
 
     <div class="mb-4">
-      <div class="text-sm mb-3">
+      <div class="text-sm mb-3 font-medium">
         <ion-text color="primary">Recent Viewed</ion-text>
       </div>
       <div>

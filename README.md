@@ -29,6 +29,10 @@ A sample POC APP
 
 ---
 
+![App Screenshot](https://raw.githubusercontent.com/nathash92/ionic-plant-app/master/screenshots/cart.png)
+
+---
+
 ## Authors
 
 - [@nathashKumar](https://www.github.com/nathash92)
